@@ -1,7 +1,7 @@
-Farbesoft CheckRole
+Farbesoft CheckRolePast
 ===================
 [![Laravel 5.5](https://img.shields.io/badge/Laravel-5.3-orange.svg?style=flat-square)](http://laravel.com)
-[![Source](http://img.shields.io/badge/source-farbesofts/checkrole-blue.svg?style=flat-square)](https://github.com/farbesofts/checkrole)
+[![Source](http://img.shields.io/badge/source-farbesofts/checkrolepast-blue.svg?style=flat-square)](https://github.com/farbesofts/checkrolepast)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
 
 checkRole is a simple and lightweight library that provides developers with a useful tool when creating login restrictions in personalized schedules by users to a specific role in the system.
@@ -30,20 +30,20 @@ php artisan vendor:publish
 ```
 Choose the option where the library is located, in my case:
 ```
-[2] Provider: Farbesofts\Checkrole\CheckroleServiceProvider
+[2] Provider: Farbesofts\Checkrolepast\CheckrolepastServiceProvider
 ```
 
 ### Service Provider
 - copy the following in config.app (array Providers)
 
 ```php
-Farbesofts\Checkrole\CheckroleServiceProvider::class,
+Farbesofts\Checkrolepast\CheckrolepastServiceProvider::class,
 ```
 
 ### Middleware kernel.php
 - copy on App\Http\Kernel.php -> (array $routeMiddleware):
 ```php
-'CheckRole' => \Farbesofts\Checkrole\CheckroleServiceProvider::class,
+'CheckRolePast' => \Farbesofts\Checkrolepast\CheckrolepastServiceProvider::class,
 ```
 
 ### Migrations
@@ -59,8 +59,8 @@ If you are using a library of roles and permissions, just migrate:
 ### Header on User Model
 - Copy on App\User.php Model:
 ```php
-use Farbesofts\Checkrole\Models\Role;
-use Farbesofts\Checkrole\Models\Timetable;
+use Farbesofts\Checkrolepast\Models\Role;
+use Farbesofts\Checkrolepast\Models\Timetable;
 use Illuminate\Support\Facades\Auth;
 ```
 ### Methods on User Model
@@ -86,7 +86,7 @@ use Illuminate\Support\Facades\Auth;
         return $this->Timetable()->where('user_id',Auth::user()->id)->first();
     }
 ```
-### Routing with CheckRole Middleware
+### Routing with CheckRolePast Middleware
 - Copy on routes\web.php: example (Role:admin)
 ```php
 Route::get('/notaccess', function () {
