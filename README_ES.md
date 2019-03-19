@@ -43,7 +43,7 @@ Farbesofts\Checkrolepast\CheckrolepastServiceProvider::class,
 ### Middleware kernel.php
 - Copiar en App\Http\Kernel.php -> (array $routeMiddleware) lo siguiente:
 ```php
-'CheckRole' => \Farbesofts\Checkrolepast\CheckrolepastServiceProvider::class,
+'CheckRole' => \Farbesofts\Checkrolepast\Middleware\CheckRolePast::class,
 ```
 
 - Migrando los Modelos
