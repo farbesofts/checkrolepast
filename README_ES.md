@@ -97,7 +97,7 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/notaccess', function () {
     return view('notaccess');
 });
-Route::group(['middleware' => 'CheckRole:admin'], function() {
+Route::group(['middleware' => 'CheckRolePast:admin'], function() {
     Route::get('/home', 'HomeController@index')->name('home');
 });
 ```
