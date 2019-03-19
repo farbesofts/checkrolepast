@@ -1,7 +1,7 @@
-Farbesoft CheckRole
+Farbesoft CheckRolePast
 ===================
-[![Laravel 5.5](https://img.shields.io/badge/Laravel-5.3-orange.svg?style=flat-square)](http://laravel.com)
-[![Source](http://img.shields.io/badge/source-farbesofts/checkrole-blue.svg?style=flat-square)](https://github.com/farbesofts/checkrole)
+[![Laravel 5.7](https://img.shields.io/badge/Laravel-5.3-orange.svg?style=flat-square)](http://laravel.com)
+[![Source](http://img.shields.io/badge/source-farbesofts/checkrolepast-blue.svg?style=flat-square)](https://github.com/farbesofts/checkrolepast)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
 
 CheckRole es una librería liviana que proporciona a los desarrolladores una herramienta útil al crear restricciones de inicio de sesión con horarios personalizados a los usuarios con un rol específico en el sistema.
